@@ -1,0 +1,155 @@
+{% extends "base.html" %}
+
+{% block title %}د. سلمى عيسى العبودي - حركة حقوق{% endblock %}
+
+{% block content %}
+<section class="profile-hero">
+    <div class="container">
+        <div class="profile-header" data-aos="fade-up">
+            <div class="profile-image">
+                <img src="{{ url_for('static', filename='images/salma.jpg') }}" alt="د. سلمى عيسى العبودي">
+            </div>
+            <div class="profile-intro">
+                <h1>الدكتورة سلمى عيسى العبودي</h1>
+                <p class="position">استاذ مساعد في كلية طب الاسنان</p>
+                <div class="social-links">
+                    <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-facebook"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="profile-about">
+    <div class="container">
+        <div class="about-content" data-aos="fade-up">
+            <h2>نبذة عن الدكتورة سلمى</h2>
+            <p class="lead">خبيرة في القانون الدستوري وحقوق الإنسان، وأستاذة جامعية مرموقة</p>
+            <div class="bio-text">
+                <p>الدكتورة سلمى عيسى العبودي أستاذة مساعدة في كلية طب الأسنان وطبيبة أسنان متميزة. تجمع بين عملها الأكاديمي وممارستها المهنية مع التزامها العميق بالعمل الإنساني والخيري. خصصت يوم الخميس من كل أسبوع لمعالجة العوائل الفقيرة والمتضررة مجاناً، إيماناً منها بأهمية دعم المجتمع وتقديم الرعاية الصحية للمحتاجين.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="achievements">
+    <div class="container">
+        <h2 class="section-title" data-aos="fade-up">الإنجازات والمساهمات</h2>
+        <div class="achievements-grid">
+            <div class="achievement-card" data-aos="fade-up">
+                <div class="icon">
+                    <i class="fas fa-graduation-cap"></i>
+                </div>
+                <h3>المؤهلات العلمية والمهنية</h3>
+                <ul>
+                    <li>دكتوراه في طب الأسنان</li>
+                    <li>أستاذة مساعدة في كلية طب الأسنان</li>
+                    <li>خبرة طبية تمتد لسنوات في علاج وجراحة الأسنان</li>
+                </ul>
+            </div>
+            
+            <div class="achievement-card" data-aos="fade-up" data-aos-delay="100">
+                <div class="icon">
+                    <i class="fas fa-hand-holding-heart"></i>
+                </div>
+                <h3>الأعمال الإنسانية والخيرية</h3>
+                <ul>
+                    <li>تخصيص يوم الخميس لمعالجة العوائل الفقيرة مجاناً</li>
+                    <li>توزيع السلال الغذائية للمحتاجين</li>
+                    <li>تنظيم حملات طبية تطوعية في المناطق المحرومة</li>
+                </ul>
+            </div>
+
+            <div class="achievement-card" data-aos="fade-up" data-aos-delay="200">
+                <div class="icon">
+                    <i class="fas fa-award"></i>
+                </div>
+                <h3>الجوائز والتكريمات</h3>
+                <ul>
+                    <li>جائزة التميز في العمل الإنساني 2024</li>
+                    <li>درع التميز من نقابة أطباء الأسنان</li>
+                    <li>شهادة تقدير من وزارة الصحة للعمل التطوعي</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="contributions">
+    <div class="container">
+        <h2 class="section-title" data-aos="fade-up">المبادرات الإنسانية</h2>
+        <div class="contributions-grid">
+            <div class="contribution-item" data-aos="fade-up">
+                <i class="fas fa-tooth"></i>
+                <h3>العيادة الخيرية</h3>
+                <p>تخصيص يوم الخميس لتقديم العلاج المجاني للعوائل المتعففة وذوي الدخل المحدود</p>
+            </div>
+            <div class="contribution-item" data-aos="fade-up" data-aos-delay="100">
+                <i class="fas fa-box-heart"></i>
+                <h3>توزيع المساعدات</h3>
+                <p>تنظيم حملات توزيع السلال الغذائية والمساعدات للعوائل المتعففة والمحتاجة</p>
+            </div>
+            <div class="contribution-item" data-aos="fade-up" data-aos-delay="200">
+                <i class="fas fa-hand-holding-medical"></i>
+                <h3>الحملات الطبية</h3>
+                <p>تنظيم حملات طبية تطوعية في المناطق المحرومة لتقديم العلاج والرعاية الصحية</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="clinic-schedule">
+    <div class="container">
+        <h2 class="section-title" data-aos="fade-up">مواعيد العيادة الخيرية</h2>
+        <div class="schedule-card" data-aos="fade-up">
+            <div class="schedule-date">
+                <span class="day">الخميس</span>
+                <span class="time">9:00 صباحاً - 5:00 مساءً</span>
+            </div>
+            <div class="schedule-details">
+                <h3>العيادة الخيرية للعوائل المتعففة</h3>
+                <p>تقدم د. سلمى العلاج المجاني للحالات التالية:</p>
+                <ul>
+                    <li>العوائل محدودة الدخل</li>
+                    <li>الأيتام والأرامل</li>
+                    <li>ذوي الاحتياجات الخاصة</li>
+                    <li>النازحين والمتضررين</li>
+                </ul>
+                <a href="#" class="btn btn-primary">احجز موعداً</a>
+            </div>
+        </div>
+    </div>
+</section>
+            <div class="event-card" data-aos="fade-up" data-aos-delay="100">
+                <div class="event-date">
+                    <span class="day">20</span>
+                    <span class="month">نوفمبر</span>
+                </div>
+                <div class="event-details">
+                    <h3>ندوة: مستقبل الحريات الأكاديمية في العراق</h3>
+                    <p>مركز الدراسات الاستراتيجية</p>
+                    <a href="#" class="btn btn-primary">التسجيل للحضور</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="contact-section">
+    <div class="container">
+        <h2 class="section-title" data-aos="fade-up">تواصل مع د. سلمى</h2>
+        <div class="contact-info" data-aos="fade-up">
+            <div class="contact-item">
+                <i class="fas fa-envelope"></i>
+                <p>البريد الإلكتروني: salma.aboudi@huquq.org</p>
+            </div>
+            <div class="contact-item">
+                <i class="fas fa-phone"></i>
+                <p>مكتب العلاقات العامة: +964 XXX XXX XXXX</p>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

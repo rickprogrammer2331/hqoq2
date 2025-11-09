@@ -1,0 +1,93 @@
+{% extends "base.html" %}
+
+{% block content %}
+<section id="candidates-hero" class="page-hero">
+    <div class="hero-content" data-aos="fade-up">
+        <h1>مرشحو حركة حقوق</h1>
+        <p>قائمة من الكفاءات الوطنية المخلصة لخدمة العراق</p>
+    </div>
+</section>
+
+<section id="list-info" class="container">
+    <div class="list-details" data-aos="fade-up">
+        <div class="list-number">
+            <span class="number">32</span>
+            <span class="text">مرشحاً</span>
+        </div>
+        <h2>قائمة حركة حقوق للانتخابات</h2>
+        <p>تقدم حركة حقوق قائمة متميزة من المرشحين المؤهلين لتمثيل الشعب العراقي</p>
+    </div>
+</section>
+
+<section id="main-candidates" class="container">
+    <h2 class="section-title" data-aos="fade-up">قيادة الحركة والمرشحين البارزين</h2>
+    <div class="candidates-grid">
+        <div class="candidate-card" data-aos="fade-up">
+            <div class="candidate-image">
+                <img src="{{ url_for('static', filename='images/candidates/munis.jpg') }}" alt="حسين مؤنس">
+            </div>
+            <div class="candidate-info">
+                <h3>حسين مؤنس</h3>
+                <p class="position">الأمين العام لحركة حقوق</p>
+                <p class="bio">قائد حركة حقوق ومؤسسها، له تاريخ حافل في العمل السياسي والوطني</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="electoral-program" class="container">
+    <h2 class="section-title" data-aos="fade-up">برنامجنا الانتخابي</h2>
+    <div class="program-points">
+        <div class="program-point" data-aos="fade-up">
+            <i class="fas fa-flag"></i>
+            <h3>السيادة الوطنية</h3>
+            <p>العمل على تعزيز سيادة العراق وحماية قراره المستقل</p>
+        </div>
+        <div class="program-point" data-aos="fade-up" data-aos-delay="100">
+            <i class="fas fa-users"></i>
+            <h3>حقوق المواطنة</h3>
+            <p>ضمان حقوق المواطنين وتحقيق العدالة الاجتماعية</p>
+        </div>
+        <div class="program-point" data-aos="fade-up" data-aos-delay="200">
+            <i class="fas fa-building"></i>
+            <h3>البناء والتنمية</h3>
+            <p>تطوير البنية التحتية وتحسين الخدمات العامة</p>
+        </div>
+        <div class="program-point" data-aos="fade-up" data-aos-delay="300">
+            <i class="fas fa-graduation-cap"></i>
+            <h3>التعليم والتطوير</h3>
+            <p>الاستثمار في التعليم وتطوير الكوادر الوطنية</p>
+        </div>
+    </div>
+</section>
+
+<section id="electoral-districts" class="container">
+    <h2 class="section-title" data-aos="fade-up">دوائرنا الانتخابية</h2>
+    <div class="districts-grid">
+        <div class="district-card" data-aos="fade-up">
+            <h3>بغداد</h3>
+            <ul class="district-candidates">
+                <li>الدائرة الأولى: 3 مرشحين</li>
+                <li>الدائرة الثانية: 2 مرشحين</li>
+                <li>الدائرة الثالثة: 2 مرشحين</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<section id="movement-media" class="container">
+    <h2 class="section-title" data-aos="fade-up">المركز الإعلامي</h2>
+    <div class="media-grid">
+        <div class="media-card" data-aos="fade-up">
+            <div class="media-image">
+                <img src="{{ url_for('static', filename='images/media/conference1.jpg') }}" alt="مؤتمر صحفي">
+            </div>
+            <div class="media-content">
+                <h3>المؤتمر الصحفي لإطلاق الحملة الانتخابية</h3>
+                <p class="date">15 أكتوبر 2025</p>
+                <p>إطلاق الحملة الانتخابية لحركة حقوق بحضور قيادات الحركة والمرشحين</p>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

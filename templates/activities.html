@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+{% block content %}
+<section id="activities-hero" class="page-hero">
+    <div class="hero-content" data-aos="fade-up">
+        <h1>أنشطة حركة حقوق</h1>
+        <p>نعمل بجد لتعزيز المشاركة السياسية والوعي الديمقراطي</p>
+    </div>
+</section>
+
+<section id="activities-list">
+    <div class="container">
+        <div class="activities-grid">
+            {% for activity in activities %}
+            <div class="activity-card" data-aos="fade-up" data-aos-delay="{{ loop.index * 100 }}">
+                <div class="activity-image">
+                    <img src="{{ url_for('static', filename='images/' + activity.image) }}" alt="{{ activity.title }}">
+                </div>
+                <div class="activity-content">
+                    <h3>{{ activity.title }}</h3>
+                    <div class="activity-date">{{ activity.date }}</div>
+                    <p>{{ activity.description }}</p>
+                    <a href="#" class="btn btn-primary">المزيد من التفاصيل</a>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+{% endblock %}

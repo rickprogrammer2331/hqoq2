@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="container" style="margin-top:100px;">
+    <div class="admin-dashboard">
+        <h1>قائمة المشتركين</h1>
+        <table style="width:100%;margin-top:20px;border-collapse:collapse;">
+            <thead>
+                <tr>
+                    <th>البريد الإلكتروني</th>
+                    <th>تاريخ الاشتراك</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for s in subscribers %}
+                <tr style="border-top:1px solid #eee;">
+                    <td>{{ s.email }}</td>
+                    <td>{{ s.created_at.strftime('%Y-%m-%d') }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</div>
+{% endblock %}

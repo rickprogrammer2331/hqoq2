@@ -1,0 +1,93 @@
+{% extends "base.html" %}
+
+{% block title %}تطوع معنا{% endblock %}
+
+{% block content %}
+<section class="volunteer-hero">
+    <div class="container">
+        <h1 data-aos="fade-up">كن جزءاً من التغيير</h1>
+        <p data-aos="fade-up" data-aos-delay="100">انضم إلى حركة حقوق وساهم في بناء مستقبل أفضل للعراق</p>
+    </div>
+</section>
+
+<section class="opportunities">
+    <div class="container">
+        <h2 class="section-title" data-aos="fade-up">فرص التطوع المتاحة</h2>
+        <div class="opportunities-grid">
+            {% for opportunity in opportunities %}
+            <div class="opportunity-card" data-aos="fade-up" data-aos-delay="100">
+                <div class="opportunity-icon">
+                    {% if opportunity.title == 'مراقب انتخابات' %}
+                    <i class="fas fa-vote-yea"></i>
+                    {% else %}
+                    <i class="fas fa-users"></i>
+                    {% endif %}
+                </div>
+                <h3>{{ opportunity.title }}</h3>
+                <div class="requirements">
+                    <h4>المتطلبات:</h4>
+                    <p>{{ opportunity.requirements }}</p>
+                </div>
+                <div class="opportunity-footer">
+                    <a href="#volunteer-form" class="btn btn-primary">
+                        <i class="fas fa-user-plus"></i>
+                        تقدم الآن
+                    </a>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+
+<section id="volunteer-form" class="volunteer-form">
+    <div class="container">
+        <h2 class="section-title" data-aos="fade-up">نموذج التطوع</h2>
+        <form data-aos="fade-up" data-aos-delay="100">
+            <div class="form-group">
+                <label for="name">الاسم الكامل</label>
+                <input type="text" id="name" name="name" required placeholder="الاسم الكامل كما في المستمسكات الرسمية">
+            </div>
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="email">البريد الإلكتروني</label>
+                    <input type="email" id="email" name="email" required placeholder="example@domain.com">
+                </div>
+                <div class="form-group">
+                    <label for="phone">رقم الهاتف</label>
+                    <input type="tel" id="phone" name="phone" required placeholder="+964 XXX XXX XXXX">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="birthdate">تاريخ الميلاد</label>
+                <input type="date" id="birthdate" name="birthdate" required>
+            </div>
+            <div class="form-group">
+                <label for="opportunity">الفرصة التطوعية المفضلة</label>
+                <select id="opportunity" name="opportunity" required>
+                    <option value="" disabled selected>اختر الفرصة التطوعية</option>
+                    {% for opportunity in opportunities %}
+                    <option value="{{ opportunity.title }}">{{ opportunity.title }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="experience">الخبرات السابقة</label>
+                <textarea id="experience" name="experience" rows="3" placeholder="اذكر خبراتك السابقة في مجال العمل التطوعي إن وجدت"></textarea>
+            </div>
+            <div class="form-group">
+                <label for="message">لماذا ترغب في التطوع معنا؟</label>
+                <textarea id="message" name="message" rows="4" required placeholder="اشرح دوافعك للتطوع مع حركة حقوق"></textarea>
+            </div>
+            <div class="form-group checkbox-group">
+                <input type="checkbox" id="terms" name="terms" required>
+                <label for="terms">أوافق على شروط وسياسة التطوع في حركة حقوق</label>
+            </div>
+            <button type="submit" class="btn btn-primary btn-block">
+                <i class="fas fa-paper-plane"></i>
+                إرسال طلب التطوع
+            </button>
+        </form>
+    </div>
+</section>
+{% endblock %}

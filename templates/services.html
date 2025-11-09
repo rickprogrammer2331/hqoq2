@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+<html dir="rtl" lang="ar">
+            <section id="services">
+            <div class="container">
+                <h2>بشنو يكدر مصطفى يخدم حركة حقوق؟</h2>
+                <div class="services-grid">
+                    {% for service in services %}
+                    <div class="service-card">
+                        <h3>{{ service.title }}</h3>
+                        <p>{{ service.description }}</p>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </section>
+
+        <section id="contact">
+            <div class="container">
+                <h2>تواصل معنا</h2>
+                <div class="contact-info">
+                    <p>البريد الإلكتروني: contact@example.com</p>
+                    <p>الهاتف: +964 XXX XXX XXXX</p>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="footer-content">
+            <div class="container">
+                <p>&copy; 2024 حركة حقوق. جميع الحقوق محفوظة.</p>
+            </div>
+        </div>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+
+</html>

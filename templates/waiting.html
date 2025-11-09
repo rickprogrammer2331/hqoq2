@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="ar">
+<head>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="hero-content" data-aos="fade-up">
+        <h1>قريباً...</h1>
+        <p>نحن نعمل على تجهيز هذا القسم ليكون جاهزاً قريباً. شكراً لصبركم!</p>
+    </div>
+    <div class="loading-spinner">
+        <i class="fas fa-spinner fa-spin fa-3x"></i>
+    </div> <button>العوده الى الصحفة الرئيسية</button>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <script>
+        document.querySelector('button').addEventListener('click', function() {
+            window.location.href = "{{ url_for('home') }}";
+        });
+    </script>
+    <style>
+    .loading-spinner {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 200px;
+        margin-top: 20px;
+    }
+    button {
+        display: block;
+        margin: 30px auto;
+        padding: 10px 20px;
+        font-size: 16px;
+        background-color: #007BFF;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    button:hover {
+        background-color: #0056b3;
+    }
+    
+    </style>
+</body>
+</html>

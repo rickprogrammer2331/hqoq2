@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>حركة حقوق - {% block title %}الرئيسية{% endblock %}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <button class="mobile-menu-btn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <ul class="nav-links">
+                <li><a href="{{ url_for('home') }}">الرئيسية</a></li>
+                <li><a href="{{ url_for('activities') }}">الأنشطة</a></li>
+                <li><a href="{{ url_for('programs') }}">البرامج</a></li>
+                <li><a href="{{ url_for('candidates') }}">المرشحون</a></li>
+                <li><a href="{{ url_for('publications') }}">المركز الإعلامي</a></li>
+                <li><a href="{{ url_for('team') }}">قيادة الحركة</a></li>
+                <li><a href="{{ url_for('volunteer') }}" class="btn btn-secondary">انضم إلينا</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="container">
+                <div class="footer-grid">
+                    <div class="footer-section">
+                        <h3>عن حركة حقوق</h3>
+                        <p>منظمة تسعى لتعزيز وحماية حقوق الإنسان والحريات الأساسية في المجتمع</p>
+                    </div>
+                    <div class="footer-section">
+                        <h3>روابط سريعة</h3>
+                        <ul>
+                            <li><a href="{{ url_for('activities') }}">الأنشطة</a></li>
+                            <li><a href="{{ url_for('programs') }}">البرامج</a></li>
+                            <li><a href="{{ url_for('publications') }}">المنشورات</a></li>
+                            <li><a href="{{ url_for('volunteer') }}">تطوع معنا</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-section">
+                        <h3>تواصل معنا</h3>
+                        <div class="contact-info">
+                            <p><i class="fas fa-envelope"></i> info@huquq.org</p>
+                            <p><i class="fas fa-phone"></i> +964 XXX XXX XXXX</p>
+                            <p><i class="fas fa-map-marker-alt"></i> بغداد، العراق</p>
+                        </div>
+                        <div class="social-links">
+                            <a href="#" class="social-link"><i class="fab fa-facebook"></i></a>
+                            <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                            <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                            <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <p>جميع الحقوق محفوظة © حركة حقوق 2025</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>

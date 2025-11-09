@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>حركة حقوق</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <button class="mobile-menu-btn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <ul>
+                <li><a href="#home">الرئيسية</a></li>
+                <li><a href="#about">عن الحركة</a></li>
+                <li><a href="#goals">أهدافنا</a></li>
+                <li><a href="#history">تاريخنا</a></li>
+                <li><a href="#services">الخدمات</a></li>
+                <li><a href="#contact">تواصل معنا</a></li>
+            </ul>
+            <div class="search-container">
+                <input type="text" id="searchInput" placeholder="ابحث هنا...">
+                <button type="button" id="searchButton">
+                    <i class="fas fa-search"></i>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section id="quick-links" class="quick-links-section">
+            <div class="container">
+                <div class="quick-links-grid" data-aos="fade-up">
+                    <a href="{{ url_for('candidates') }}" class="quick-link-card">
+                        <i class="fas fa-users"></i>
+                        <h3>المرشحون</h3>
+                        <p>تعرف على مرشحينا في الانتخابات</p>
+                    </a>
+                    <a href="{{ url_for('activities') }}" class="quick-link-card">
+                        <i class="fas fa-calendar-alt"></i>
+                        <h3>الأنشطة</h3>
+                        <p>اطلع على أحدث فعالياتنا</p>
+                    </a>
+                    <a href="{{ url_for('publications') }}" class="quick-link-card">
+                        <i class="fas fa-newspaper"></i>
+                        <h3>المركز الإعلامي</h3>
+                        <p>أحدث الأخبار والمنشورات</p>
+                    </a>
+                    <a href="{{ url_for('volunteer') }}" class="quick-link-card">
+                        <i class="fas fa-hands-helping"></i>
+                        <h3>تطوع معنا</h3>
+                        <p>كن جزءاً من التغيير</p>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section id="hero">
+            <div class="hero-content" data-aos="fade-up">
+                <h1>معاً نحو مستقبل أفضل</h1>
+                <p>نعمل من أجل تعزيز الحقوق وبناء مجتمع ديمقراطي</p>
+                <div class="hero-buttons">
+                    <a href="#about" class="btn btn-primary">تعرف علينا</a>
+                    <a href="{{ url_for('volunteer') }}" class="btn btn-secondary">انضم إلينا</a>
+                </div>
+            </div>
+            <div class="scroll-indicator">
+                <div class="mouse"></div>
+                <p>اسحب للأسفل</p>
+            </div>
+        </section>
+
+        <section id="about">
+            <div class="container">
+                <h2 data-aos="fade-up">من هي حركة حقوق؟</h2>
+                <div class="about-content" data-aos="fade-up" data-aos-delay="200">
+                    <p class="highlight">حركة حقوق هي حركة سياسية عراقية ظهرت ضمن المشهد السياسي العراقي، وتقدّم نفسها بأنها «صوت الشعب» و«حماية الحقوق».</p>
+                    <p>بقيادة السيد حسين مؤنس، تأسست الحركة استجابةً للحاجة إلى تمثيل سياسي حقيقي للشعب العراقي. وكما صرح السيد مؤنس، جاء تأسيسها كردّ على «فراغ سياسي كبير وخيبة أمل لدى الشعب».</p>
+                </div>
+
+                <div class="vision-mission" data-aos="fade-up" data-aos-delay="300">
+                    <h3>رؤيتنا وأهدافنا</h3>
+                    <ul class="goals-list">
+                        <li>تأكيد سيادة القرار العراقي وحماية المصالح الوطنية</li>
+                        <li>العمل ضمن الإطار الدستوري والقانوني</li>
+                        <li>تمثيل المواطن العراقي الشريف</li>
+                        <li>تنفيذ برنامج انتخابي واضح وشامل</li>
+                    </ul>
+                </div>
+
+                <div class="achievements" data-aos="fade-up" data-aos-delay="400">
+                    <h3>إنجازاتنا ونشاطاتنا</h3>
+                    <div class="achievements-grid">
+                        <div class="achievement-card">
+                            <i class="fas fa-vote-yea"></i>
+                            <h4>المشاركة السياسية</h4>
+                            <p>قدمنا قائمة بـ 32 مرشحاً لمجلس النواب في أول مشاركة انتخابية</p>
+                        </div>
+                        <div class="achievement-card">
+                            <i class="fas fa-landmark"></i>
+                            <h4>العمل المؤسسي</h4>
+                            <p>نعمل وفق برنامج سياسي واضح يهدف لخدمة المواطن العراقي</p>
+                        </div>
+                        <div class="achievement-card">
+                            <i class="fas fa-balance-scale"></i>
+                            <h4>السيادة الوطنية</h4>
+                            <p>نسعى لتعزيز السيادة العراقية وحماية المصالح الوطنية</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="goals">
+            <div class="container">
+                <h2 data-aos="fade-up">أهدافنا</h2>
+                <div class="goals-grid">
+                    {% for goal in goals %}
+                    <div class="goal-card" data-aos="fade-up" data-aos-delay="{{ loop.index * 100 }}">
+                        <i class="fas fa-star"></i>
+                        <p>{{ goal }}</p>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </section>
+
+        <section id="history">
+            <div class="container">
+                <h2 data-aos="fade-up">تاريخ حركة حقوق</h2>
+                <div class="timeline">
+                    {% for milestone in history %}
+                    <div class="timeline-item" data-aos="fade-up" data-aos-delay="{{ loop.index * 100 }}">
+                        <div class="year">{{ milestone.year }}</div>
+                        <div class="event">{{ milestone.event }}</div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </section>
+
+        <section id="initiatives" class="initiatives-section">
+            <div class="container">
+                <h2 data-aos="fade-up">مبادرات وإنجازات حركة حقوق</h2>
+                <div class="initiatives-grid">
+                    <div class="initiative-card" data-aos="fade-up">
+                        <div class="initiative-icon">
+                            <i class="fas fa-hands-helping"></i>
+                        </div>
+                        <h3>حملة دعم المواطن</h3>
+                        <p>مبادرة شاملة لدعم المواطنين وتوفير الخدمات الأساسية في المناطق المحرومة</p>
+                        <div class="initiative-stats">
+                            <div class="stat">
+                                <span class="number">50,000+</span>
+                                <span class="label">مستفيد</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="initiative-card" data-aos="fade-up" data-aos-delay="100">
+                        <div class="initiative-icon">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <h3>برنامج التثقيف السياسي</h3>
+                        <p>برامج تدريبية وورش عمل لتعزيز الوعي السياسي والمشاركة المجتمعية</p>
+                        <div class="initiative-stats">
+                            <div class="stat">
+                                <span class="number">1,000+</span>
+                                <span class="label">متدرب</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="initiative-card" data-aos="fade-up" data-aos-delay="200">
+                        <div class="initiative-icon">
+                            <i class="fas fa-vote-yea"></i>
+                        </div>
+                        <h3>مراقبة الانتخابات</h3>
+                        <p>فريق متخصص لمراقبة العملية الانتخابية وضمان نزاهتها</p>
+                        <div class="initiative-stats">
+                            <div class="stat">
+                                <span class="number">500+</span>
+                                <span class="label">مراقب</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="media-center" class="media-section">
+            <div class="container">
+                <h2 data-aos="fade-up">المركز الإعلامي</h2>
+                <div class="media-grid">
+                    <div class="media-card" data-aos="fade-up">
+                        <div class="media-date">2 نوفمبر 2025</div>
+                        <h3>بيان صحفي: موقف حركة حقوق من التطورات السياسية الأخيرة</h3>
+                        <p>أكدت حركة حقوق موقفها الثابت في دعم مصالح الشعب العراقي وحماية السيادة الوطنية...</p>
+                        <a href="#" class="read-more">اقرأ المزيد <i class="fas fa-arrow-left"></i></a>
+                    </div>
+                    <div class="media-card" data-aos="fade-up" data-aos-delay="100">
+                        <div class="media-date">1 نوفمبر 2025</div>
+                        <h3>افتتاح المقر الجديد لحركة حقوق في محافظة البصرة</h3>
+                        <p>في إطار التوسع والانتشار، افتتحت حركة حقوق مقراً جديداً في محافظة البصرة...</p>
+                        <a href="#" class="read-more">اقرأ المزيد <i class="fas fa-arrow-left"></i></a>
+                    </div>
+                    <div class="media-card" data-aos="fade-up" data-aos-delay="200">
+                        <div class="media-date">30 أكتوبر 2025</div>
+                        <h3>إطلاق مبادرة "صوتك أمانة" للتوعية الانتخابية</h3>
+                        <p>أطلقت حركة حقوق مبادرة جديدة للتوعية بأهمية المشاركة في العملية الانتخابية...</p>
+                        <a href="#" class="read-more">اقرأ المزيد <i class="fas fa-arrow-left"></i></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="join-movement" class="join-section">
+            <div class="container">
+                <div class="join-content" data-aos="fade-up">
+                    <h2>انضم إلى حركة حقوق</h2>
+                    <p>كن جزءاً من التغيير الإيجابي في العراق</p>
+                    <div class="join-grid">
+                        <div class="join-card">
+                            <i class="fas fa-user-plus"></i>
+                            <h3>عضوية الحركة</h3>
+                            <p>انضم إلينا كعضو فاعل في حركة حقوق</p>
+                            <a href="{{ url_for('volunteer') }}" class="btn btn-secondary">سجل الآن</a>
+                        </div>
+                        <div class="join-card">
+                            <i class="fas fa-hands-helping"></i>
+                            <h3>العمل التطوعي</h3>
+                            <p>شارك في مبادراتنا ونشاطاتنا التطوعية</p>
+                            <a href="{{ url_for('volunteer') }}" class="btn btn-secondary">تطوع معنا</a>
+                        </div>
+                        <div class="join-card">
+                            <i class="fas fa-bullhorn"></i>
+                            <h3>دعم الحركة</h3>
+                            <p>ساهم في نشر رسالة ومبادئ حركة حقوق</p>
+                            <a href="{{ url_for('volunteer') }}" class="btn btn-secondary">ادعم الحركة</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>جميع الحقوق محفوظة © حركة حقوق 2025</p>
+        </div>
+    </footer>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>

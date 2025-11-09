@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <title>تسجيل دخول الأدمن</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <style>
+        .admin-login-box {max-width:350px;margin:60px auto;padding:32px 24px;background:#fff;border-radius:12px;box-shadow:0 2px 12px #0002;}
+        .admin-login-box h1 {text-align:center;margin-bottom:24px;}
+        .admin-login-box input {width:100%;margin-bottom:14px;padding:8px 10px;border-radius:6px;border:1px solid #ccc;}
+        .admin-login-box button {width:100%;background:#232f3e;color:#fff;padding:10px 0;border-radius:6px;border:none;font-size:1.1em;}
+    </style>
+</head>
+<body>
+    <div class="admin-login-box">
+        <h1>دخول الأدمن</h1>
+        <form method="POST">
+            <input type="text" name="username" placeholder="اسم المستخدم" required>
+            <input type="password" name="password" placeholder="كلمة المرور" required>
+            <button type="submit">دخول</button>
+        </form>
+        {% with messages = get_flashed_messages() %}
+            {% if messages %}
+                <div style="color:#c00;text-align:center;margin-top:10px;">{{ messages[0] }}</div>
+            {% endif %}
+        {% endwith %}
+    </div>
+</body>
+</html>

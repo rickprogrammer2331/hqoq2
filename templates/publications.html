@@ -1,0 +1,61 @@
+{% extends "base.html" %}
+
+{% block title %}المركز الإعلامي{% endblock %}
+
+{% block content %}
+<section class="publications-hero">
+    <div class="container">
+        <h1 data-aos="fade-up">المركز الإعلامي</h1>
+        <p data-aos="fade-up" data-aos-delay="100">أحدث المنشورات والتقارير والدراسات من حركة حقوق</p>
+    </div>
+</section>
+
+<section class="publications-grid">
+    <div class="container">
+        <div class="filters" data-aos="fade-up">
+            <button class="filter-btn active" data-filter="all">الكل</button>
+            <button class="filter-btn" data-filter="كتيب">كتب وكتيبات</button>
+            <button class="filter-btn" data-filter="تقرير">تقارير</button>
+            <button class="filter-btn" data-filter="دراسة">دراسات</button>
+            <button class="filter-btn" data-filter="بيان">بيانات صحفية</button>
+        </div>
+
+        <div class="publications-container" data-aos="fade-up" data-aos-delay="100">
+            {% for publication in publications %}
+            <div class="publication-card" data-type="{{ publication.type }}">
+                <div class="pub-type">{{ publication.type }}</div>
+                <h3>{{ publication.title }}</h3>
+                <p class="pub-year">{{ publication.year }}</p>
+                <p class="pub-desc">{{ publication.description }}</p>
+                <div class="pub-actions">
+                    <a href="#" class="btn btn-primary">
+                        <i class="fas fa-download"></i>
+                        تحميل PDF
+                    </a>
+                    <a href="#" class="btn btn-secondary">
+                        <i class="fas fa-share-alt"></i>
+                        مشاركة
+                    </a>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+
+<section class="subscribe-section">
+    <div class="container">
+        <div class="subscribe-card" data-aos="fade-up">
+            <h2>ابقَ على اطلاع</h2>
+            <p>اشترك في نشرتنا البريدية للحصول على آخر الأخبار والمنشورات مباشرة في بريدك الإلكتروني</p>
+            <form class="subscribe-form">
+                <input type="email" placeholder="أدخل بريدك الإلكتروني هنا..." required>
+                <button type="submit" class="btn btn-secondary">
+                    <i class="fas fa-paper-plane"></i>
+                    اشتراك
+                </button>
+            </form>
+        </div>
+    </div>
+</section>
+{% endblock %}

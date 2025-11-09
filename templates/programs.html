@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+
+{% block content %}
+<section id="programs-hero" class="page-hero">
+    <div class="hero-content" data-aos="fade-up">
+        <h1>برامجنا التدريبية</h1>
+        <p>برامج متخصصة لتعزيز الوعي السياسي والديمقراطي</p>
+    </div>
+</section>
+
+<section id="programs-list">
+    <div class="container">
+        <div class="programs-grid">
+            {% for program in programs %}
+            <div class="program-card" data-aos="fade-up" data-aos-delay="{{ loop.index * 100 }}">
+                <div class="program-icon">
+                    <i class="fas fa-graduation-cap"></i>
+                </div>
+                <h3>{{ program.title }}</h3>
+                <div class="program-duration">
+                    <i class="fas fa-clock"></i>
+                    <span>{{ program.duration }}</span>
+                </div>
+                <p>{{ program.description }}</p>
+                <a href="#" class="btn btn-secondary">سجل الآن</a>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+{% endblock %}
